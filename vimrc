@@ -97,6 +97,9 @@ set hlsearch        " Highlight search by default.
 set incsearch       " search pattern when still typing
 set nowrapscan
 
+" system clipboard 사용 (https://hyoje420.tistory.com/49)
+set clipboard=unnamedplus
+
 
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
