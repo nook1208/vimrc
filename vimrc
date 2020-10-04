@@ -25,6 +25,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 " All of your Plugins must be added before the following line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
@@ -34,10 +35,14 @@ Plugin 'nanotech/jellybeans.vim'
 " for rust
 Plugin 'rust-lang/rust.vim'
 Plugin 'dense-analysis/ale'
+Plugin 'cespare/vim-toml'
 
 " for fzf to search files
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+
+" for auto bracket
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 
@@ -57,6 +62,11 @@ let NERDTreeShowHidden=1
 "    \ 'file': '\v\.(exe|so|dll)$'
 "\ }
 
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
+let g:airline_theme='hybrid'
+set laststatus=2 " turn on bottom bar
+
 color jellybeans
 
 " Tag List 환경설정
@@ -75,13 +85,11 @@ set t_Co=256
 " 들여쓰기 설정
 set autoindent
 set smartindent
-set tabstop=8
-set shiftwidth=8
-set softtabstop=8
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set smarttab
 set expandtab
-" 붙여넣기 설정
-set paste
 " 한글 입력 설정
 set encoding=utf-8
 set termencoding=utf-8
@@ -115,3 +123,10 @@ augroup markdown
     autocmd BufRead,BufNew *.md setf markdown
 augroup END
 
+" for rusty tags
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+
+let mapleader = ","
+nnoremap <leader>q :bp<CR>
+nnoremap <leader>w :bn<CR>
