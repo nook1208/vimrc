@@ -44,6 +44,9 @@ Plugin 'junegunn/fzf.vim'
 " for auto bracket
 Plugin 'jiangmiao/auto-pairs'
 
+" This plugin is used for displaying thin vertical lines at each indentation level for code indented with spaces.
+Plugin 'Yggdroot/indentLine'
+
 call vundle#end()            " required
 
 
