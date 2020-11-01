@@ -111,6 +111,8 @@ set nowrapscan
 " system clipboard 사용 (https://hyoje420.tistory.com/49)
 set clipboard=unnamedplus
 
+set noswapfile
+
 
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
@@ -133,3 +135,5 @@ autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . 
 let mapleader = ","
 nnoremap <leader>q :bp<CR>
 nnoremap <leader>w :bn<CR>
+
+let g:rustfmt_autosave = 1
