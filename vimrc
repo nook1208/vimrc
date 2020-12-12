@@ -114,6 +114,12 @@ set clipboard=unnamedplus
 
 set noswapfile
 
+" Don't hide markdown symbols (https://vi.stackexchange.com/questions/7258/how-do-i-prevent-vim-from-hiding-symbols-in-markdown-and-json)
+set conceallevel=0
+
+" Show me the korean language in vim
+set fileencodings=utf8,euc-kr
+
 
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
