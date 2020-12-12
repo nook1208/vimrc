@@ -1,7 +1,7 @@
 # Vimrc Setup Guide
 **1. Make Symbolic link** 
 ```
-$ ln -n <Absolute path to vimrc in this repo> <~/.vimrc>  
+$ ln -n <Absolute path to vimrc in this repo> ~/.vimrc  
 e.g) ln -n ~/git/vimrc/vimrc ~/.vimrc  
 ```
 
