@@ -16,4 +16,9 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $ vim +PluginInstall +qall  
 ```
 
+4. [Set up fzf](https://github.com/junegunn/fzf#as-vim-plugin)
+```
+cd ~/.vim/bundle/fzf
+./install
+```
 
