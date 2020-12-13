@@ -22,3 +22,10 @@ cd ~/.vim/bundle/fzf
 ./install
 ```
 
+Also [install ripgrep](https://github.com/BurntSushi/ripgrep#installation) to use like ':Rg <searching string>' in fzf
+```
+//NOTE: It's for ubuntu 16.04. 
+$ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+$ sudo dpkg -i ripgrep_12.1.1_amd64.deb
+```
+
