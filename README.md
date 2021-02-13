@@ -14,7 +14,7 @@ If you don't have clipboard support in your vim, then :
 sudo apt update && sudo apt install vim-gtk -y
 ```
 
-**2-1. [Get latest version of vim](https://vi.stackexchange.com/questions/10817/how-can-i-get-a-newer-version-of-vim-on-ubuntu)**
+**2-1. [Get latest version of vim](https://vi.stackexchange.com/questions/10817/how-can-i-get-a-newer-version-of-vim-on-ubuntu)**  
 Also you can get latest version of vim like this:
 ```
 sudo add-apt-repository ppa:jonathonf/vim
