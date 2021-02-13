@@ -41,3 +41,20 @@ cd ~/.vim/bundle/fzf
 ```
 
 **6. [Setup Korean](https://sigmafelix.wordpress.com/2020/08/17/wsl2%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/)**   
+
+**7. [Install rust and toolchain](https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials#-the-tldr-version)**  
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+source $HOME/.cargo/env
+// If you don't have compiler toolchain, install gcc toolchain:
+sudo apt install build-essential
+cargo install cargo-binutils rustfilt
+```
+
+**8. [Setup rust-analyzer](https://rust-analyzer.github.io/manual.html#coc-rust-analyzer)**  
+Type this in your vim :  
+```
+vim <anything>
+:CocInstall coc-rust-analyzer
+```
