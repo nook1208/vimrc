@@ -124,6 +124,11 @@ set conceallevel=0
 set enc=utf-8
 set fencs=utf-8,cp949
 
+" Fix strange characters in vim (e.g. >4;2m)
+" (https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim)
+let &t_TI = ""
+let &t_TE = ""
+
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
